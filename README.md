@@ -20,5 +20,5 @@ Perfect for cleaning up temporary downloads, logs, caches, or any folder that sh
 ### 1️⃣ Pull the image
 
 ```bash
-docker pull ghcr.io/dhaevyd/file-purge:latest
+docker pull ghcr.io/dhaevyd/media-manager:latest
 
