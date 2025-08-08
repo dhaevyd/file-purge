@@ -1,0 +1,18 @@
+services:
+  media-dl-manager:
+    container_name: media-manager
+    image: ghcr.io/dhaevyd/media-manager:1.2.0
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - /mnt/wd4tb/media-server/downloads:/mnt/wd4tb/media-server/downloads
+    environment:
+      WEBHOOK_URL: ${WEBHOOK_URL}
+      TARGET_DIR: ${TARGET_DIR}
+    env_file: .env
+    working_dir: /app
+
+
+
+# docker build -t ghcr.io/dhaevyd/media-manager:1.2.0 .
+# docker push ghcr.io/dhaevyd/media-manager:1.2.0
